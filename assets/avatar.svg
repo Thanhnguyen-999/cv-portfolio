@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#1e1e1f"/>
+  <rect x="16" y="16" width="480" height="480" rx="84" fill="none" stroke="#ffdb70" stroke-width="6" opacity="0.35"/>
+  <text x="256" y="300" font-family="Arial, Helvetica, sans-serif" font-size="150" font-weight="bold" fill="#ffdb70" text-anchor="middle">NA</text>
+  <text x="256" y="360" font-family="Arial, Helvetica, sans-serif" font-size="34" fill="#8a8a8a" text-anchor="middle">Ảnh đại diện</text>
+</svg>
