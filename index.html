@@ -98,15 +98,20 @@
     .filter-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:23px}
     .filter{padding:7px 12px;border:0;border-radius:8px;background:transparent;color:var(--muted);font-size:12px;cursor:pointer}
     .filter.active,.filter:hover{color:var(--accent)}
-    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-    .project{min-width:0;padding:22px;border:1px solid var(--line);border-radius:15px;background:var(--card-2);box-shadow:0 12px 24px rgba(0,0,0,.08)}
+    .project-grid{display:grid;grid-template-columns:1fr;gap:20px}
+    .project{min-width:0;padding:24px;border:1px solid var(--line);border-radius:15px;background:var(--card-2);box-shadow:0 12px 24px rgba(0,0,0,.08)}
     .project[hidden]{display:none}
     .project-index{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px;color:var(--accent);font-size:10px;font-weight:700;letter-spacing:.08em}
-    .project-index time{color:var(--soft);font-weight:600;letter-spacing:0}
-    .project h3{margin:0 0 7px;font-size:17px;line-height:1.4}
-    .project-company{margin:0 0 11px;color:var(--ink);font-size:11px;font-weight:600}
+    .project-index time{color:var(--soft);font-weight:600;letter-spacing:0;text-align:right}
+    .project h3{margin:0 0 7px;font-size:18px;line-height:1.4}
+    .project-company{margin:0 0 12px;color:var(--ink);font-size:11px;font-weight:600}
     .project-role{color:var(--accent)}
-    .project-description{margin:0 0 15px;color:var(--muted);font-size:11px;line-height:1.72}
+    .project-description{margin:0;color:var(--muted);font-size:12px;line-height:1.78}
+    .project-details{margin:18px 0 17px;padding-top:16px;border-top:1px solid var(--line)}
+    .project-details h4{margin:0 0 10px;color:var(--ink);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+    .project-details ul{display:grid;gap:7px;margin:0;padding:0;list-style:none}
+    .project-details li{position:relative;padding-left:17px;color:var(--muted);font-size:11px;line-height:1.7}
+    .project-details li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
     .project .tags{margin-top:auto}
 
     .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:34px}
@@ -240,15 +245,172 @@
             <button class="filter" type="button" data-filter="web">Web Platforms</button>
           </div>
           <div class="project-grid">
-            <article class="project" data-category="business web"><div class="project-index"><span>CASE / 01</span><time>Nov 2025 — Present</time></div><h3>Goods Management System &amp; 4D-to-Web Migration</h3><p class="project-company">Strawberry Jams Hanoi · <span class="project-role">Fullstack Developer</span></p><p class="project-description">In-house inventory platform replacing a legacy 4D desktop app with a modern web stack. Work includes 4D data export, schema redesign, business-rule re-implementation, and ownership of the production VPS environment.</p><div class="tags"><span class="tag">Inventory</span><span class="tag">Data Migration</span><span class="tag">VPS</span><span class="tag">Web Platform</span></div></article>
-            <article class="project" data-category="business integration"><div class="project-index"><span>CASE / 02</span><time>Jul 2022 — Nov 2025</time></div><h3>Company CRM &amp; Operations Platform</h3><p class="project-company">One ID · <span class="project-role">Fullstack Developer, 10-person team</span></p><p class="project-description">CRM supporting multi-program operations with partner API integrations, reporting, analytics, workflow automation, and inventory synchronization.</p><div class="tags"><span class="tag">Laravel</span><span class="tag">Next.js</span><span class="tag">Vue.js</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Redis</span><span class="tag">Socket.IO</span></div></article>
-            <article class="project" data-category="integration web"><div class="project-index"><span>CASE / 03</span><time>Jul 2022 — Nov 2025</time></div><h3>ecode.asia — Voucher Management Website</h3><p class="project-company">LTD Vietnam · <span class="project-role">Fullstack Developer, 5-person team</span></p><p class="project-description">Customer-facing voucher portal for loyalty partners including Viettel and TPBank. Delivered lookup and redemption APIs, internationalization, expiry and redemption-state rules, plus low-inventory Telegram and email alerts.</p><div class="tags"><span class="tag">NestJS</span><span class="tag">Tailwind CSS</span><span class="tag">MySQL</span><span class="tag">MongoDB</span></div></article>
-            <article class="project" data-category="business"><div class="project-index"><span>CASE / 04</span><time>Jul 2022 — Nov 2025</time></div><h3>TPBank Branch Gift Ordering System</h3><p class="project-company">Tien Phong Commercial JSB · <span class="project-role">Fullstack Developer, 5-person team</span></p><p class="project-description">Internal ordering system for bank branches covering the full order lifecycle, multi-step approvals, chart dashboards, Excel exports, role-based access, and email notifications.</p><div class="tags"><span class="tag">NestJS</span><span class="tag">MySQL</span><span class="tag">MongoDB</span></div></article>
-            <article class="project" data-category="business integration"><div class="project-index"><span>CASE / 05</span><time>Jul 2022 — Nov 2025</time></div><h3>Airport Lounge Booking Management</h3><p class="project-company">Tien Phong Commercial JSB · <span class="project-role">Fullstack Developer, 10-person team</span></p><p class="project-description">Lounge check-in system with boarding-pass camera scanning, a booking-code activation API, Omicall real-time caller popups, and a dedicated booking portal.</p><div class="tags"><span class="tag">NestJS</span><span class="tag">Next.js</span><span class="tag">Vue.js</span><span class="tag">MySQL</span><span class="tag">MongoDB</span></div></article>
-            <article class="project" data-category="integration business"><div class="project-index"><span>CASE / 06</span><time>Jul 2022 — Nov 2025</time></div><h3>Loyalty Deal Management &amp; Partner API Sync</h3><p class="project-company">Tien Phong Commercial JSB · <span class="project-role">Fullstack Developer, 10-person team</span></p><p class="project-description">Points, voucher, and gift platform inside the My Viettel app with payment gateway integration, automated fulfillment, OAuth2, rate limiting, and high-load hardening.</p><div class="tags"><span class="tag">NestJS</span><span class="tag">Laravel</span><span class="tag">Next.js</span><span class="tag">Vue.js</span><span class="tag">Redis</span></div></article>
-            <article class="project" data-category="web"><div class="project-index"><span>CASE / 07</span><time>Jan 2021 — May 2022</time></div><h3>Corporate Website</h3><p class="project-company">Gzone Media · <span class="project-role">Fullstack Developer, 3-person team</span></p><p class="project-description">Company website with CMS modules, SEO metadata management, a dynamic sitemap, and Redis caching.</p><div class="tags"><span class="tag">Laravel</span><span class="tag">Redis</span><span class="tag">MySQL</span><span class="tag">Bootstrap 4</span></div></article>
-            <article class="project" data-category="web integration"><div class="project-index"><span>CASE / 08</span><time>Mar 2021 — May 2022</time></div><h3>Game Top-up Portal &amp; News System</h3><p class="project-company">Gzone Media · <span class="project-role">Fullstack Developer, 10-person team</span></p><p class="project-description">Game top-up and news platform with 9PAY and Momo payments, gift-code redemption, an API gateway to the Android game store app, and Redis/Memcached caching.</p><div class="tags"><span class="tag">Node.js</span><span class="tag">Angular</span><span class="tag">Vue.js</span><span class="tag">TypeScript</span><span class="tag">MySQL</span><span class="tag">Redis</span></div></article>
-            <article class="project" data-category="web integration"><div class="project-index"><span>CASE / 09</span><time>Oct 2019 — Dec 2019</time></div><h3>E-commerce Platform</h3><p class="project-company">Minh Phuc Holding · <span class="project-role">Web Developer, 5-person team</span></p><p class="project-description">Online shopping platform with VNPay, Momo, and 9Pay integrations, an internal e-wallet, an affiliate program, and Elasticsearch product search.</p><div class="tags"><span class="tag">Laravel</span><span class="tag">Vue.js</span><span class="tag">Nuxt.js</span><span class="tag">Tailwind CSS</span><span class="tag">MySQL</span><span class="tag">Elasticsearch</span></div></article>
+            <article class="project" data-category="business web">
+              <div class="project-index"><span>CASE / 01</span><time>Nov 2025 — Present</time></div>
+              <h3>Goods Management System &amp; 4D-to-Web Platform Migration</h3>
+              <p class="project-company">Strawberry Jams Hanoi · <span class="project-role">Fullstack Developer</span></p>
+              <p class="project-description">An in-house goods and inventory platform replacing the company’s legacy 4D desktop application with a modern web stack, alongside on-site customer support and end-to-end ownership of the production environment.</p>
+              <div class="project-details"><h4>Responsibilities &amp; impact</h4><ul>
+                <li>Installed and patched software directly on client machines in response to customer support requests.</li>
+                <li>Built catalog, stock-movement, order, and reporting modules for the goods management system.</li>
+                <li>Led the legacy migration, including 4D data export, schema redesign, and re-implementation of business rules.</li>
+                <li>Managed VPS provisioning, deployment pipelines, environment configuration, monitoring, and production infrastructure.</li>
+              </ul></div>
+              <div class="tags"><span class="tag">Inventory</span><span class="tag">4D Migration</span><span class="tag">Data Modeling</span><span class="tag">VPS</span><span class="tag">DevOps</span></div>
+            </article>
+
+            <article class="project" data-category="business integration web">
+              <div class="project-index"><span>CASE / 02</span><time>Jul 2022 — Nov 2025</time></div>
+              <h3>Company CRM &amp; Operations Platform</h3>
+              <p class="project-company">One ID · <span class="project-role">Fullstack Developer · 10-person team</span></p>
+              <p class="project-description">A multi-program CRM with partner integrations, reporting, customer-data analytics, workflow automation, and inventory synchronization across departments.</p>
+              <div class="project-details"><h4>Responsibilities &amp; impact</h4><ul>
+                <li>Owned delivery from stakeholder requirements and system design through implementation, deployment, and post-launch iteration.</li>
+                <li>Designed a layered controller–service–repository architecture and domain boundaries for customers, partners, programs, vouchers, and inventory.</li>
+                <li>Built Laravel REST APIs, a MySQL relational model, and selective MongoDB collections for unstructured partner payloads.</li>
+                <li>Created a responsive admin SPA with role-based menus, reusable components, complex filters, exports, and chart-based analytics.</li>
+                <li>Implemented two-way partner APIs with webhooks, retries, idempotency, and reconciliation jobs.</li>
+                <li>Automated departmental workflows with queues and schedulers, and delivered near-real-time inventory sync with Socket.IO and atomic stock updates.</li>
+                <li>Improved large list and export endpoints through composite indexes, query rewrites, and Redis caching.</li>
+                <li>Added authentication, session and CSRF protection, rate limiting, suspicious-pattern detection, structured logging, and access monitoring.</li>
+              </ul></div>
+              <div class="tags"><span class="tag">Laravel</span><span class="tag">Next.js</span><span class="tag">Vue.js</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Redis</span><span class="tag">Socket.IO</span><span class="tag">Queue</span><span class="tag">Nginx</span><span class="tag">Cloudflare R2</span></div>
+            </article>
+
+            <article class="project" data-category="integration web">
+              <div class="project-index"><span>CASE / 03</span><time>Jul 2022 — Nov 2025</time></div>
+              <h3>ecode.asia — Voucher Management Website</h3>
+              <p class="project-company">LTD Vietnam JSC · <span class="project-role">Fullstack Developer · 5-person team</span></p>
+              <p class="project-description">A customer-facing portal that displays and redeems promotional codes issued through loyalty partners including Viettel and TPBank.</p>
+              <div class="project-details"><h4>Responsibilities &amp; impact</h4><ul>
+                <li>Designed NestJS APIs for voucher lookup, redemption, customer activity logging, and upstream inventory synchronization.</li>
+                <li>Built a responsive Tailwind CSS portal with voucher cards, redemption flows, and clear status indicators.</li>
+                <li>Implemented expiry, location, usage-condition, and redemption-state rules and surfaced them clearly in the interface.</li>
+                <li>Delivered multi-language UI and dynamic voucher content, plus per-customer activity logging for compliance and reporting.</li>
+                <li>Added audience segmentation, voucher visibility controls, and a categorized support-ticket workflow.</li>
+                <li>Sent email and Telegram alerts when voucher inventory was low or depleted.</li>
+              </ul></div>
+              <div class="tags"><span class="tag">NestJS</span><span class="tag">Tailwind CSS</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Socket.IO</span><span class="tag">Queue</span><span class="tag">Nginx</span></div>
+            </article>
+
+            <article class="project" data-category="business web">
+              <div class="project-index"><span>CASE / 04</span><time>Jul 2022 — Nov 2025</time></div>
+              <h3>TPBank Branch Gift Ordering System</h3>
+              <p class="project-company">Tien Phong Commercial JSB · <span class="project-role">Fullstack Developer · 5-person team</span></p>
+              <p class="project-description">An internal system for bank branches to request gifts according to VIP-customer data and tier rules, with complete order management and reconciliation.</p>
+              <div class="project-details"><h4>Responsibilities &amp; impact</h4><ul>
+                <li>Modeled order, branch, customer, gift-catalog, and reconciliation domains in NestJS.</li>
+                <li>Built REST APIs for the full order lifecycle: create, approve or reject, fulfill, and reconcile.</li>
+                <li>Created dashboards for monthly order trends, tier-based gift catalogs, and branch quota usage.</li>
+                <li>Implemented multi-step approvals, rejection paths, and exception “free-choice” gift orders for special VIP cases.</li>
+                <li>Delivered advanced search, Excel exports, customer management, monthly branch quotas, and manager-level access controls.</li>
+                <li>Automated event emails and end-of-day reports covering total orders and remaining inventory.</li>
+                <li>Added routed support requests and scheduled visibility controls for promotional gifts.</li>
+              </ul></div>
+              <div class="tags"><span class="tag">NestJS</span><span class="tag">Tailwind CSS</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Socket.IO</span><span class="tag">Queue</span><span class="tag">Excel</span></div>
+            </article>
+
+            <article class="project" data-category="business integration web">
+              <div class="project-index"><span>CASE / 05</span><time>Jul 2022 — Nov 2025</time></div>
+              <h3>Airport Lounge Booking Management</h3>
+              <p class="project-company">Tien Phong Commercial JSB · <span class="project-role">Fullstack Developer · 10-person team</span></p>
+              <p class="project-description">A booking, check-in, and reconciliation system used by airport lounges and partner service desks, with customer lookup and real-time booking updates.</p>
+              <div class="project-details"><h4>Responsibilities &amp; impact</h4><ul>
+                <li>Helped design the lounge check-in architecture, balancing service speed with data accuracy.</li>
+                <li>Built partner-data ingestion, validation, conflict-resolution, and deduplication pipelines.</li>
+                <li>Implemented check-in, reconciliation, member-tier, customer, usage-cap, and booking-state modules.</li>
+                <li>Integrated camera-based boarding-pass scanning to populate passenger data automatically.</li>
+                <li>Built rate-limited booking-code activation APIs with single-use guarantees.</li>
+                <li>Created the partner booking portal in Next.js and Vue.js with customer, card, usage, privilege, booking, and live-status flows.</li>
+                <li>Integrated Omicall so inbound calls display customer information in real time.</li>
+                <li>Added templated email and Telegram notifications with per-channel routing, then monitored and supported production operations.</li>
+              </ul></div>
+              <div class="tags"><span class="tag">NestJS</span><span class="tag">Next.js</span><span class="tag">Vue.js</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Socket.IO</span><span class="tag">Omicall</span><span class="tag">Cloudflare R2</span></div>
+            </article>
+
+            <article class="project" data-category="business integration web">
+              <div class="project-index"><span>CASE / 06</span><time>Jul 2022 — Nov 2025</time></div>
+              <h3>Loyalty Deal Management &amp; Partner API Sync</h3>
+              <p class="project-company">Tien Phong Commercial JSB · <span class="project-role">Fullstack Developer · 10-person team</span></p>
+              <p class="project-description">A loyalty, voucher, and gift platform inside the My Viettel app, supporting point accumulation, online reward redemption, payment processing, fulfillment, and operational reporting.</p>
+              <div class="project-details"><h4>Responsibilities &amp; impact</h4><ul>
+                <li>Co-designed a hybrid architecture using NestJS for high-throughput partner APIs and Laravel for legacy administration.</li>
+                <li>Built management and reporting interfaces in Next.js and Vue.js for bank operations.</li>
+                <li>Implemented atomic gift-inventory updates, automated fulfillment, per-branch management, and idempotent dispatch under retries.</li>
+                <li>Designed transaction-safe point and voucher exchange workflows to prevent double spending.</li>
+                <li>Integrated a payment gateway with reconcilable logs and unified callback handling.</li>
+                <li>Developed scheduler-driven reporting and analytics pipelines for transactions and campaign performance.</li>
+                <li>Hardened the platform with OAuth2, rate limiting, structured logs, transaction management, caching, and performance tuning.</li>
+                <li>Implemented TPBank cross-system synchronization with retries, dead-letter queues, and reconciliation.</li>
+              </ul></div>
+              <div class="tags"><span class="tag">NestJS</span><span class="tag">Laravel</span><span class="tag">Next.js</span><span class="tag">Vue.js</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Redis</span><span class="tag">OAuth2</span><span class="tag">Scheduler</span></div>
+            </article>
+
+            <article class="project" data-category="business web">
+              <div class="project-index"><span>CASE / 07</span><time>Jan 2021 — May 2022</time></div>
+              <h3>Corporate Website</h3>
+              <p class="project-company">Gzone Media · <span class="project-role">Fullstack Developer · 3-person team</span></p>
+              <p class="project-description">A corporate website covering company information, milestones, recruitment, and content managed through an internal administration system.</p>
+              <div class="project-details"><h4>Responsibilities &amp; impact</h4><ul>
+                <li>Led requirements gathering and translated customer needs into technical scope.</li>
+                <li>Designed Laravel administration and content modules with Redis-backed caching for fast page loads.</li>
+                <li>Built SEO metadata management, dynamic sitemap generation, and structured-data optimization.</li>
+                <li>Delivered content, media, and recruitment-post management modules.</li>
+                <li>Monitored production, handled maintenance, and shipped new features as business requirements evolved.</li>
+              </ul></div>
+              <div class="tags"><span class="tag">Laravel</span><span class="tag">Redis</span><span class="tag">HTML</span><span class="tag">Bootstrap 4</span><span class="tag">jQuery</span><span class="tag">MySQL</span><span class="tag">Queue</span><span class="tag">Nginx</span></div>
+            </article>
+
+            <article class="project" data-category="business web">
+              <div class="project-index"><span>CASE / 08</span><time>Mar 2021 — Jun 2021</time></div>
+              <h3>Internal Document Management System</h3>
+              <p class="project-company">Gzone Media · <span class="project-role">Fullstack Developer · 3-person team</span></p>
+              <p class="project-description">An internal document platform with department-based permissions, audit history, secure uploads, multilingual content, and a data-dense administration dashboard.</p>
+              <div class="project-details"><h4>Responsibilities &amp; impact</h4><ul>
+                <li>Owned analysis and architecture for permissions, departments, document hierarchies, and audit trails.</li>
+                <li>Built RBAC, file upload, administration, department, and content modules in Laravel.</li>
+                <li>Designed the dashboard for quick navigation across dense operational data.</li>
+                <li>Partitioned large tables, defined indexing strategies, rewrote slow queries, and validated performance under load.</li>
+                <li>Implemented OAuth login, two-factor authentication, session management, and access logging.</li>
+                <li>Built validation, storage, and metadata extraction pipelines for multiple document formats.</li>
+                <li>Added multilingual support and personally configured deployment, Certbot SSL, and the production domain.</li>
+              </ul></div>
+              <div class="tags"><span class="tag">Laravel</span><span class="tag">RBAC</span><span class="tag">OAuth</span><span class="tag">2FA</span><span class="tag">MySQL</span><span class="tag">Nginx</span><span class="tag">Certbot</span></div>
+            </article>
+
+            <article class="project" data-category="web integration">
+              <div class="project-index"><span>CASE / 09</span><time>Mar 2021 — May 2022</time></div>
+              <h3>Game Top-up Portal &amp; News System</h3>
+              <p class="project-company">Gzone Media · <span class="project-role">Fullstack Developer · 10-person team</span></p>
+              <p class="project-description">A game distribution portal combining top-up, payment, news, reward fulfillment, and back-office workflows across multiple game launches.</p>
+              <div class="project-details"><h4>Responsibilities &amp; impact</h4><ul>
+                <li>Designed the system architecture for top-ups, payment callbacks, and reward fulfillment.</li>
+                <li>Built Node.js APIs for 9PAY and Momo payments, gift-code redemption, and scratch-card processing.</li>
+                <li>Developed an authenticated, device-bound API gateway connecting the web platform to the Android game store app.</li>
+                <li>Customized the payment experience with Angular, Vue.js, and TypeScript.</li>
+                <li>Implemented idempotent reward, scratch-card conversion, and account-balance flows to prevent double credit.</li>
+                <li>Used Redis and Memcached for sessions and frequently accessed payment configuration.</li>
+                <li>Analyzed player conversion and reward data, and supported production through high-traffic launch periods.</li>
+              </ul></div>
+              <div class="tags"><span class="tag">Node.js</span><span class="tag">Angular</span><span class="tag">Vue.js</span><span class="tag">TypeScript</span><span class="tag">MySQL</span><span class="tag">Redis</span><span class="tag">Memcached</span><span class="tag">Socket.IO</span></div>
+            </article>
+
+            <article class="project" data-category="business integration web">
+              <div class="project-index"><span>CASE / 10</span><time>Oct 2019 — Dec 2019</time></div>
+              <h3>E-commerce Platform with Internal Management</h3>
+              <p class="project-company">Minh Phuc Holding · <span class="project-role">Web Developer · 5-person team</span></p>
+              <p class="project-description">An online shopping platform with multi-gateway payments, an internal e-wallet, affiliate marketing, retail-chain integration, and a companion mobile ticket-booking experience.</p>
+              <div class="project-details"><h4>Responsibilities &amp; impact</h4><ul>
+                <li>Contributed to requirements analysis and core backend and frontend development.</li>
+                <li>Built responsive storefront and administration interfaces with Vue.js, Nuxt.js, and Tailwind CSS.</li>
+                <li>Integrated VNPay, Momo, and 9Pay with unified callback handling and reconciliation.</li>
+                <li>Built e-wallet flows and an affiliate program with referral tracking and commission calculation.</li>
+                <li>Implemented Elasticsearch full-text search and faceted catalog filtering.</li>
+                <li>Used AWS S3 and Cloudflare R2 for media and customer uploads.</li>
+                <li>Delivered authentication, cart, checkout, and CRUD flows, then tuned performance and security and resolved production issues.</li>
+              </ul></div>
+              <div class="tags"><span class="tag">Laravel</span><span class="tag">Vue.js</span><span class="tag">Nuxt.js</span><span class="tag">Tailwind CSS</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Redis</span><span class="tag">Elasticsearch</span><span class="tag">AWS S3</span><span class="tag">Cloudflare R2</span></div>
+            </article>
           </div>
         </section>
 
